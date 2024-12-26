@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Game</title>
+  <link rel="stylesheet" href="typing.css">
+</head>
+<style>
+  
+</style>
+<body>
+  
+  <div id="game-container">
+    <div id="word-area">
+      <div id="score-display">Score: 0</div>
+      <div id="timer">Time Left: 20s</div>
+      <div id="start-menu">
+        <button id="play-btn">Play Game</button>
+        <button id="play-again" style="display: none;">Play Again</button>
+      </div>
+      <div id="shooter"></div>
+    </div>
+    <input type="text" id="input-box" placeholder="Type here..." autofocus />
+    <div id="toggu">
+      <button id="toggle-theme">
+        <svg xmlns="http://www.w3.org/2000/svg" x="20px" y="10px" width="60" height="20" viewBox="0 0 24 24">
+          <path
+            d="M 11 0 L 11 3 L 13 3 L 13 0 L 11 0 z M 19.740234 2.8378906 L 17.617188 4.9589844 L 19.033203 6.3730469 L 21.154297 4.2519531 L 19.740234 2.8378906 z M 4.2519531 2.8457031 L 2.8378906 4.2597656 L 4.9589844 6.3828125 L 6.3730469 4.9667969 L 4.2519531 2.8457031 z M 12 5 C 8.1458495 5 5 8.1458524 5 12 C 5 15.854148 8.1458495 19 12 19 C 15.854151 19 19 15.854148 19 12 C 19 8.1458524 15.854151 5 12 5 z M 0 11 L 0 13 L 3 13 L 3 11 L 0 11 z M 21 11 L 21 13 L 24 13 L 24 11 L 21 11 z M 19.041016 17.617188 L 17.626953 19.033203 L 19.748047 21.154297 L 21.162109 19.740234 L 19.041016 17.617188 z M 4.9667969 17.626953 L 2.8457031 19.748047 L 4.2597656 21.162109 L 6.3828125 19.041016 L 4.9667969 17.626953 z M 11 21 L 11 24 L 13 24 L 13 21 L 11 21 z">
+          </path>
+        </svg>
+      </button>
+      <div id="speed-display">Speed: 1x</div>
+    </div>
+  </div>
+  <div id="accuracy-display">Accuracy: 100%</div>
+  <script src="typing.js"></script>
+</body>
+</html>

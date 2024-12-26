@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Game - Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+      background: linear-gradient(to right, #000428, #004e92);
+      height: 100vh;
+    }
+    h1 {
+      margin-top: 100px;
+      font-size: 50px;
+    }
+    .btn {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: rgba(0,0,255,0.3);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: rgba(0,255,0,0.3);
+    }
+    select {
+      font-size: 18px;
+      padding: 5px;
+      margin-top: 20px;
+      background-color: #444;
+      color: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hyper Hustle</h1>
+  <p>Select Difficulty Level:</p>
+  <select id="level-select">
+    <option value="easy">Easy(20s)</option>
+    <option value="medium">Medium(30s)</option>
+    <option value="hard">Hard(60s)</option>
+  </select>
+  <br><br>
+  <a href="typing.html"><button class="btn" id="start-btn">Start Game</button></a>
+  <script>
+    document.getElementById('start-btn').addEventListener('click', function() {
+      const level = document.getElementById('level-select').value;
+      localStorage.setItem('gameLevel', level);
+      window.location.href = 'game.html'; 
+    });
+  </script>
+</body>
+</html>

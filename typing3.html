@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Game - Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+      background: linear-gradient(to right, #000428, #004e92);
+      height: 100vh;
+    }
+    h1 {
+      margin-top: 50px;
+      font-size: 50px;
+    }
+    .result {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+    .result span {
+      font-weight: bold;
+      color: #FFD700;
+    }
+    .btn {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin-top: 30px;
+      background-color: rgba(0, 255, 0, 0.5);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: rgba(0, 255, 0, 0.8);
+    }
+  </style>
+</head>
+<body>
+  <h1>Game Over!</h1>
+  <div class="result">Score: <span id="final-score">0</span></div>
+  <div class="result">WPM: <span id="wpm">0</span></div>
+  <div class="result">Accuracy: <span id="accuracy">0%</span></div>
+  <a href="typing2.html"><button class="btn" id="retry-btn">Play Again</button></a>
+  <script>
+    
+    const finalScore = localStorage.getItem('score');
+    console.log('finalScore - ',finalScore);
+    
+    const wpm = localStorage.getItem('speed');
+    const accuracy = localStorage.getItem('accuracy');
+    
+    document.getElementById('final-score').textContent = finalScore;
+    document.getElementById('wpm').textContent = wpm;
+    document.getElementById('accuracy').textContent = accuracy;
+    
+    document.getElementById('retry-btn').addEventListener('click', function() {
+      localStorage.clear(); 
+      window.location.href = 'home.html'; 
+    });
+  </script>
+</body>
+</html>
